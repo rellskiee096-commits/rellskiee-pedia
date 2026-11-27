@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RellSkieePEDIA - Jual Akun MLBB</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{min-height:100vh;padding:16px;color:#fff;background-image:radial-gradient(rgba(255,255,255,.22) 2px,transparent 2.5px),linear-gradient(180deg,#4a90e2,#2f7de1 35%,#1a6fd0 60%,#0f5cb8);background-size:26px 26px,cover}
+.header{background:#fff;border-radius:20px;padding:20px;text-align:center;color:#1e40af;display:flex;gap:16px;align-items:center;justify-content:center}
+.logo{width:80px;height:80px;background:#e5e7eb;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#999;font-weight:bold;flex-shrink:0;overflow:hidden;cursor:pointer}
+.logo img{width:100%;height:100%;object-fit:cover}
+.search{width:100%;padding:14px;border-radius:16px;border:none;outline:none;margin:16px 0;font-size:15px}
+.cats{display:flex;gap:8px;margin-bottom:16px}
+.cats button{padding:10px 18px;border-radius:12px;border:2px solid #fff;background:#1d4ed8;color:#fff;cursor:pointer;font-weight:bold}
+.cats button.active{background:#fff;color:#1e40af}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;display:flex;gap:14px;color:#111;position:relative}
+.foto-wrap{width:180px;flex-shrink:0;position:relative}
+.foto{width:180px;height:120px;background:#e5e7eb;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;font-weight:bold;text-align:center;font-size:12px;overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover}
+.nav-foto{position:absolute;top:45px;background:rgba(0,0,0,.6);color:#fff;border:none;width:28px;height:28px;border-radius:50%;cursor:pointer;font-weight:bold}
+.nav-kiri{left:4px}.nav-kanan{right:4px}
+.jumlah-foto{position:absolute;bottom:6px;right:6px;background:rgba(0,0,0,.6);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px}
+.info{flex:1}
+.badge{position:absolute;top:16px;right:16px;padding:6px 14px;border-radius:8px;color:#fff;font-weight:bold;font-size:12px;z-index:2}
+.ready{background:#22c55e}.sold-b{background:#ef4444}
+.price{color:#16a34a;font-weight:bold;font-size:18px;margin:6px 0}
+.btn{display:inline-block;background:#25D366;color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:13px;margin-right:8px}
+.btn2{display:inline-block;background:#e0e7ff;color:#1e40af;padding:10px 16px;border-radius:12px;font-weight:bold;font-size:13px;cursor:pointer;border:none}
+.stempel{position:absolute;bottom:16px;right:16px;border:3px solid #ef4444;color:#ef4444;padding:4px 12px;font-weight:900;transform:rotate(-12deg);border-radius:6px;display:none;z-index:2}
+.card.sold .stempel{display:block}
+.card.sold .btn{opacity:.4;pointer-events:none}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99;overflow:auto;padding:20px}
+.box{background:#fff;color:#111;max-width:600px;margin:20px auto;padding:20px;border-radius:20px}
+.box input,.box textarea,.box select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px}
+.box button{width:100%;padding:12px;border:none;border-radius:10px;background:#1d4ed8;color:#fff;font-weight:bold;margin-top:8px;cursor:pointer}
+.item-admin{display:flex;justify-content:space-between;gap:8px;background:#f1f5f9;padding:10px;border-radius:10px;margin:6px 0;align-items:center}
+.item-admin button{width:auto;padding:6px 10px;margin-left:4px;font-size:12px}
+.thumb-admin{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.thumb-admin div{position:relative;width:80px;height:60px}
+.thumb-admin img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.thumb-admin button{position:absolute;top:-6px;right:-6px;width:22px!important;height:22px!important;padding:0!important;background:#ef4444!important;border-radius:50%!important;font-size:12px}
+.footer-baru{background:#fff;color:#111;border-radius:20px;padding:32px 20px 20px;text-align:center;margin-top:20px}
+.footer-logo{font-size:22px;font-weight:900;color:#1e40af;letter-spacing:1px}
+.footer-logo span{color:#2563eb}
+.footer-desc{font-size:15px;line-height:1.6;color:#333;max-width:520px;margin:16px auto}
+.footer-lokasi{font-weight:800;font-size:16px;line-height:1.5;margin:16px 0 28px}
+.footer-sosmed-title{font-size:13px;letter-spacing:3px;color:#9ca3af;font-weight:800;margin-bottom:14px}
+.footer-sosmed{display:flex;flex-direction:column;gap:12px;align-items:center}
+.footer-sosmed a{color:#111;text-decoration:none;font-size:16px}
+.footer-sosmed a:hover{color:#1d4ed8;font-weight:bold}
+.footer-copy{border-top:1px solid #eee;margin-top:24px;padding-top:14px;font-size:12px;color:#888}
+@media(max-width:600px){.card{flex-direction:column}.foto-wrap,.foto{width:100%;height:160px}.header{flex-direction:column}.nav-foto{top:65px}}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="logo" id="logoBox">LOGO</div>
+  <div style="text-align:left"><h1>RellSkieePEDIA</h1><p style="color:#3b82f6">@rellskieereall - JUAL AKUN MLBB</p></div>
+</div>
+
+<input class="search" id="cari" placeholder="Cari akun..." oninput="render()">
+
+<div class="cats">
+  <button class="active" onclick="setFilter('semua',this)">Semua</button>
+  <button onclick="setFilter('ready',this)">READY</button>
+  <button onclick="setFilter('sold',this)">SOLD</button>
+</div>
+
+<div id="list"></div>
+
+<div class="footer-baru">
+  <div class="footer-logo">Rell<span>Skiee</span>PEDIA</div>
+  <p class="footer-desc">
+    RellSkieePEDIA adalah tempat jual beli akun Mobile Legends terpercaya, aman, dan fast respon. Mulai dari akun smurf, akun sultan, sampai akun collector lengkap. Semua akun sudah dicek, data jelas, dan siap langsung dimainkan.
+  </p>
+  <div class="footer-lokasi">
+    Kec. Stabat, Kab. Langkat,<br>Provinsi Sumatera Utara, Indonesia
+  </div>
+  <div class="footer-sosmed-title">SOSIAL MEDIA</div>
+  <div class="footer-sosmed">
+    <a href="https://wa.me/628388703976?text=Halo%20min%20RellSkieePEDIA%2C%20mau%20tanya%20akun%20MLBB" target="_blank">💬 WhatsApp</a>
+    <a href="https://www.tiktok.com/@rellskieereall" target="_blank">🎵 TikTok</a>
+  </div>
+  <div class="footer-copy">© 2026 RellSkieePEDIA - @rellskieereall<br>Jual Akun MLBB Aman & Terpercaya</div>
+</div>
+
+<div class="modal" id="adminModal"><div class="box">
+  <h2>Panel Admin - RellSkieePEDIA</h2>
+  <p style="font-size:13px;color:#666">Tambah akun baru / Edit / SOLD. 1 akun bisa 5 foto.</p>
+  <hr style="margin:12px 0">
+  <label><b>Ganti Logo:</b></label>
+  <input type="file" accept="image/*" onchange="gantiLogo(this)">
+  <label><b>Tambah / Edit Akun:</b></label>
+  <input id="f_nama" placeholder="Nama akun, ex: FS ACC EPIC V BAXIA">
+  <input id="f_harga" placeholder="Harga, ex: Rp 10.000">
+  <input id="f_rank" placeholder="Rank / Deskripsi singkat, ex: Smurf epic V wr 100%">
+  <textarea id="f_detail" placeholder="Detail akun: skin apa aja, change name on/off, dll"></textarea>
+  <select id="f_status"><option value="ready">READY</option><option value="sold">SOLD</option></select>
+  <label><b>Foto Akun (bisa banyak):</b></label>
+  <div id="thumbList" class="thumb-admin"></div>
+  <button type="button" style="background:#22c55e" onclick="document.getElementById('f_fotoInput').click()">+ TAMBAH FOTO LAGI</button>
+  <input type="file" accept="image/*" id="f_fotoInput" style="display:none" onchange="tambahFoto(this)">
+  <p style="font-size:12px;color:#888;margin-top:6px">Pencet + Tambah Foto Lagi berkali-kali buat nambah foto ke-2, ke-3, dst. Max 5 foto.</p>
+  <input type="hidden" id="editId">
+  <button onclick="simpanAkun()">SIMPAN AKUN</button>
+  <button style="background:#22c55e" onclick="tambahAkunBaru()">+ TAMBAH AKUN LAINNYA</button>
+  <button style="background:#64748b" onclick="resetForm()">Batal Edit / Kosongkan Form</button>
+  <hr style="margin:16px 0">
+  <h3>Daftar Akun Lu:</h3>
+  <div id="adminList"></div>
+  <button style="background:#64748b" onclick="tutupAdmin()">Tutup</button>
+</div></div>
+
+<div class="modal" id="detailModal"><div class="box"><div id="detailIsi"></div><button style="background:#64748b" onclick="document.getElementById('detailModal').style.display='none'">Tutup</button></div></div>
+
+<script>
+const WA = "628388703976";
+let filter = 'semua';
+let fotosSementara = [];
+let fotoIndex = {};
+
+let dataRaw = JSON.parse(localStorage.getItem('rellskiee_akun') || 'null') || [
+ {id:1,nama:"FS ACC EPIC V BAXIA",harga:"Rp 10.000",rank:"Smurf epic V wr 100%",detail:"Akun smurf, wr baxia 100%.",status:"ready",fotos:[]},
+ {id:2,nama:"AKUN SULTAN - 500 SKIN",harga:"Rp 1.500.000",rank:"Mythic - 500 Skin - 100 Hero",detail:"Skin Collector banyak, Change Name ON.",status:"ready",fotos:[]},
+ {id:3,nama:"AKUN COLLECTOR - ALL COLLECTOR",harga:"Rp 3.000.000",rank:"Mythical Glory - All Collector",detail:"Akun collector lengkap.",status:"sold",fotos:[]}
+];
+let data = dataRaw.map(function(a){
+  if(a.foto && !a.fotos) a.fotos = [a.foto];
+  if(!a.fotos) a.fotos = [];
+  return a;
+});
+
+let logoSaved = localStorage.getItem('rellskiee_logo') || "";
+if(logoSaved){ document.getElementById('logoBox').innerHTML = '<img src="'+logoSaved+'">'; }
+
+function simpan(){ localStorage.setItem('rellskiee_akun', JSON.stringify(data)); }
+function tutupAdmin(){ document.getElementById('adminModal').style.display='none'; }
+function setFilter(f,btn){ filter=f; document.querySelectorAll('.cats button').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); render(); }
+
+function getFoto(a, idx){
+  if(!a.fotos || a.fotos.length===0) return "";
+  return a.fotos[idx % a.fotos.length];
+}
+function gantiFoto(id, arah){
+  if(!fotoIndex[id]) fotoIndex[id]=0;
+  let a = data.find(function(x){return x.id===id});
+  if(!a.fotos || a.fotos.length<=1) return;
+  fotoIndex[id] = (fotoIndex[id] + arah + a.fotos.length) % a.fotos.length;
+  render();
+}
+function render(){
+  let q = (document.getElementById('cari').value || "").toLowerCase().trim();
+  let html = "";
+  data.forEach(function(a){
+    let cocokCat = (filter==='semua' || a.status===filter);
+    // FIX CARI: sekarang nyari di nama + rank + detail + harga + status
+    let semuaTeks = (a.nama + " " + a.rank + " " + a.detail + " " + a.harga + " " + a.status).toLowerCase();
+    let cocokCari = q === "" || semuaTeks.includes(q);
+    if(cocokCat && cocokCari){
+      let idx = fotoIndex[a.id] || 0;
+      let foto = getFoto(a, idx);
+      let total = a.fotos ? a.fotos.length : 0;
+      let nav = "";
+      if(total > 1){
+        nav = '<button class="nav-foto nav-kiri" onclick="event.stopPropagation();gantiFoto('+a.id+',-1)">‹</button><button class="nav-foto nav-kanan" onclick="event.stopPropagation();gantiFoto('+a.id+',1)">›</button><span class="jumlah-foto">'+(idx+1)+'/'+total+'</span>';
+      }
+      html += '<div class="card '+(a.status==='sold'?'sold':'')+'">'
+        + '<div class="foto-wrap"><div class="foto">'+(foto?'<img src="'+foto+'">':'FOTO AKUN<br>KOSONG')+'</div>'+nav+'</div>'
+        + '<div class="info"><span class="badge '+(a.status==='sold'?'sold-b':'ready')+'">'+a.status.toUpperCase()+'</span>'
+        + '<h3>'+a.nama+'</h3><p style="color:#64748b;font-size:13px">'+a.rank+'</p><div class="price">'+a.harga+'</div>'
+        + '<a class="btn" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Halo min, mau order '+a.nama+' '+a.harga)+'" target="_blank">Beli via WA</a>'
+        + '<button class="btn2" onclick="lihatDetail('+a.id+')">Lihat Detail</button></div>'
+        + '<div class="stempel">SOLD OUT</div></div>';
+    }
+  });
+  document.getElementById('list').innerHTML = html || "<div style='background:#fff;color:#111;padding:20px;border-radius:16px;text-align:center'>Akun tidak ditemukan</div>";
+}
+function lihatDetail(id){
+  let a = data.find(function(x){return x.id===id});
+  let galeri = "";
+  if(a.fotos && a.fotos.length>0){
+    galeri = a.fotos.map(function(f){ return '<img src="'+f+'" style="width:100%;border-radius:10px;margin-bottom:8px">'; }).join("");
+  } else { galeri = '<div class="foto" style="width:100%;height:200px">FOTO AKUN KOSONG</div>'; }
+  document.getElementById('detailIsi').innerHTML = galeri+'<h2 style="margin:12px 0">'+a.nama+'</h2><p>'+a.rank+'</p><div class="price">'+a.harga+'</div><p style="margin:12px 0">'+a.detail+'</p><p>Status: <b>'+a.status.toUpperCase()+'</b></p><a class="btn" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Halo min, mau order '+a.nama)+'" target="_blank" style="display:block;text-align:center;margin-top:12px">Beli via WA</a>';
+  document.getElementById('detailModal').style.display='block';
+}
+function renderThumb(){
+  document.getElementById('thumbList').innerHTML = fotosSementara.map(function(f,i){
+    return '<div><img src="'+f+'"><button type="button" onclick="hapusFoto('+i+')">x</button></div>';
+  }).join("") || "<span style='font-size:12px;color:#888'>Belum ada foto</span>";
+}
+function tambahFoto(input){
+  if(!input.files[0]) return;
+  if(fotosSementara.length >= 5){ alert("Max 5 foto per akun!"); return; }
+  let r = new FileReader(); r.onload = function(e){ fotosSementara.push(e.target.result); renderThumb(); }; r.readAsDataURL(input.files[0]);
+  input.value = "";
+}
+function hapusFoto(i){ fotosSementara.splice(i,1); renderThumb(); }
+function gantiLogo(input){
+  let r = new FileReader(); r.onload = function(e){ localStorage.setItem('rellskiee_logo', e.target.result); document.getElementById('logoBox').innerHTML = '<img src="'+e.target.result+'">'; alert("Logo berhasil diganti!"); }; r.readAsDataURL(input.files[0]);
+}
+function simpanAkun(){
+  let nama = document.getElementById('f_nama').value;
+  let harga = document.getElementById('f_harga').value;
+  if(!nama || !harga){ alert("Isi nama & harga dulu!"); return; }
+  let editId = document.getElementById('editId').value;
+  if(editId){
+    let a = data.find(function(x){return x.id==editId});
+    a.nama=nama; a.harga=harga; a.rank=document.getElementById('f_rank').value; a.detail=document.getElementById('f_detail').value; a.status=document.getElementById('f_status').value;
+    if(fotosSementara.length>0) a.fotos = fotosSementara.slice();
+  } else {
+    data.unshift({id:Date.now(),nama:nama,harga:harga,rank:document.getElementById('f_rank').value,detail:document.getElementById('f_detail').value,status:document.getElementById('f_status').value,fotos:fotosSementara.slice()});
+  }
+  simpan(); render(); renderAdmin(); alert("Berhasil disimpan! Akun udah muncul di depan.");
+}
+function tambahAkunBaru(){
+  if(document.getElementById('f_nama').value){ simpanAkun(); }
+  resetForm();
+  document.getElementById('f_nama').scrollIntoView({behavior:'smooth', block:'center'});
+  document.getElementById('f_nama').focus();
+  alert("Silahkan isi akun baru lagi!");
+}
+function resetForm(){ ['f_nama','f_harga','f_rank','f_detail','editId'].forEach(function(id){document.getElementById(id).value=""}); document.getElementById('f_status').value="ready"; fotosSementara=[]; renderThumb(); document.getElementById('f_nama').style.border="1px solid #ddd"; document.getElementById('f_nama').style.background="#fff"; }
+function renderAdmin(){
+  document.getElementById('adminList').innerHTML = data.map(function(a){
+    return '<div class="item-admin"><span><b>'+a.nama+'</b><br><small>'+a.harga+' - '+a.status.toUpperCase()+' - '+(a.fotos?a.fotos.length:0)+' foto</small></span><span><button onclick="editAkun('+a.id+')" style="background:#1d4ed8;color:#fff;border:none;border-radius:8px">Edit</button><button onclick="toggleSold('+a.id+')" style="background:#f59e0b;color:#fff;border:none;border-radius:8px">'+(a.status==='sold'?'Jadi READY':'Jadi SOLD')+'</button><button onclick="hapusAkun('+a.id+')" style="background:#ef4444;color:#fff;border:none;border-radius:8px">Hapus</button></span></div>';
+  }).join("");
+}
+function editAkun(id){
+  let a = data.find(function(x){return x.id===id});
+  document.getElementById('editId').value = a.id;
+  document.getElementById('f_nama').value = a.nama;
+  document.getElementById('f_harga').value = a.harga;
+  document.getElementById('f_rank').value = a.rank;
+  document.getElementById('f_detail').value = a.detail;
+  document.getElementById('f_status').value = a.status;
+  fotosSementara = a.fotos ? a.fotos.slice() : [];
+  renderThumb();
+  document.getElementById('f_nama').scrollIntoView({behavior:'smooth', block:'center'});
+  document.getElementById('f_nama').style.border = "3px solid #22c55e";
+  document.getElementById('f_nama').style.background = "#dcfce7";
+  alert("Lagi ngedit: " + a.nama + "\nUbah di form atas, bisa tambah foto lagi, terus pencet SIMPAN AKUN");
+}
+function toggleSold(id){ let a=data.find(function(x){return x.id===id}); a.status = a.status==='sold'?'ready':'sold'; simpan(); render(); renderAdmin(); }
+function hapusAkun(id){ if(confirm("Hapus akun ini?")){ data=data.filter(function(x){return x.id!==id}); simpan(); render(); renderAdmin(); } }
+
+let klikLogo = 0;
+document.getElementById('logoBox').addEventListener('click', function(){
+  klikLogo++;
+  if(klikLogo >= 5){ klikLogo=0; bukaAdmin(); }
+  setTimeout(function(){ klikLogo=0 }, 2000);
+});
+if(window.location.hash === "#admin-rell"){ bukaAdmin(); }
+function bukaAdmin(){
+  let p = prompt("Masukin password admin:");
+  if(p === "rellskiee123"){
+    document.getElementById('adminModal').style.display='block'; renderAdmin(); renderThumb();
+  } else if(p !== null){ alert("Bukan admin!"); }
+}
+
+render();
+</script>
+</body>
+</html>
